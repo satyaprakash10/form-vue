@@ -6,14 +6,17 @@
     </div> -->
     <navbar/>
     <router-view />
+    <!-- <todo-list /> -->
   </div>
 </template>
 
 <script>
 import navbar from './components/Navbar';
+import TodoList from './components/TodoList';
 export default {
   components: {
-    navbar
+    navbar,
+    TodoList
   }
   
 }
