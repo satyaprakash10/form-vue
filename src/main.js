@@ -1,8 +1,9 @@
-import Vue from "vue";
-import App from "./App.vue";
-import router from "./router";
-import Vuelidate from "vuelidate";
-import { store } from "./store/store";
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
+import Vuelidate from 'vuelidate'
+
+// import { store } from "./store/store";
 // import firebase from "firebase";
 import Vuex from 'vuex'
 
@@ -10,14 +11,13 @@ Vue.use(Vuex)
 
 window.eventBus = new Vue()
 
-Vue.config.productionTip = false;
-import BootstrapVue from "bootstrap-vue";
-Vue.use(BootstrapVue);
-Vue.use(Vuelidate);
+Vue.config.productionTip = false
+import BootstrapVue from 'bootstrap-vue'
+Vue.use(BootstrapVue)
+Vue.use(Vuelidate)
 
-
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-vue/dist/bootstrap-vue.css";
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 // const config = {
 //   apiKey: "AIzaSyDL1PCbAJGkMJsV7utnkmDUvikdnQJWdeQ",
@@ -31,6 +31,6 @@ import "bootstrap-vue/dist/bootstrap-vue.css";
 // Vue.use(firebase);
 new Vue({
   router,
-  store,
+  // store,
   render: h => h(App)
-}).$mount("#app");
+}).$mount('#app')

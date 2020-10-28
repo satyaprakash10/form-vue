@@ -1,109 +1,87 @@
 <template>
-  <div>
-    <div>
-      <b-navbar toggleable="lg" type="dark" variant="info">
-      <router-link to="/">
-        <p href="" class="web-style">
-          Web Portal
-        </p>
-      </router-link>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      <h1 class="logo mr-auto">
+        <a href="index.html">Demo<span>.</span></a>
+      </h1>
 
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li>
+            <router-link to="/jobs">
+              <a href="/jobs">Portfolio</a>
+            </router-link>
+          </li>
+          <li><a href="#portfolio">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li class="drop-down flex">
+            <a href="#" class="">Drop Down </a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="drop-down">
+                <a href="#">Deep Drop Down</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-      <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav >
-          <b-nav-item href="#" class="services-1">
-            <router-link to="/jobs">Jobs</router-link>
-            </b-nav-item>
-          <!-- <b-nav-item href="#" class="services-1">
-            <router-link to="/message">Message</router-link>
-          </b-nav-item> -->
-          <b-nav-item href="#"  class="services-1">
-            <router-link to="/aboutus">About Us</router-link>
-          </b-nav-item>    
-      </b-navbar-nav>
- 
-        <b-navbar-nav class="ml-auto">
-         
-
-          <b-nav-item-dropdown text="Link" style="font-size:20px;" right>
-            <b-dropdown-item href="#" style="font-size:15px;">
-             <router-link to="/design">DESIGN</router-link>
-            </b-dropdown-item>
-            <b-dropdown-item href="#" style="font-size:15px;">
-             <router-link to="/products">PRODUCTS</router-link> 
-            </b-dropdown-item>
-            <!-- <b-dropdown-item href="#" style="font-size:15px;">TODOAPP</b-dropdown-item> -->
-            <b-dropdown-item href="#" style="font-size:15px;">
-             <router-link to="/todoapp">TODO APP</router-link> 
-            </b-dropdown-item>
-          </b-nav-item-dropdown>
-
-          <b-nav-item-dropdown right>
-           
-            <template v-slot:button-content>
-              <em style="font-size:20px;">User</em>
-            </template>
-
-            <b-dropdown-item href="#" style="font-size:15px;">
-              <router-link to="/signin">Sign In</router-link> 
-            </b-dropdown-item>
-            <b-dropdown-item href="#" style="font-size:15px;">
-              <router-link to="/users"> Sign Up </router-link>
-            </b-dropdown-item>
-            <!-- <b-dropdown-item href="#" style="font-size:15px;">
-              <router-link to="/message">Sign Out</router-link>  
-            </b-dropdown-item> -->
-          </b-nav-item-dropdown>
-          <b-nav-item href="#"  class="services-1">
-            <button class="fa fa-user-circle  btn-default " style="color:black;" @click="logout">
-              SIGN OUT
-              </button>
-          </b-nav-item>    
-        </b-navbar-nav>
-      </b-collapse>
-  </b-navbar>
-  <!-- <Todo/> -->
-</div>
-
-  </div>
+      <!-- .nav-menu -->
+      <a href="#about" class="get-started-btn scrollto">Get Started</a>
+    </div>
+  </header>
+  <!-- End Header -->
 </template>
+
 <script>
-import Todo from "./TodoList";
-import firebase from "firebase";
+// import firebase from 'firebase'
+import { ChevronDownIcon } from '@vue-hero-icons/outline'
+
 export default {
   components: {
-    Todo
+    ChevronDownIcon
   },
   methods: {
-      logout: function() {
-        alert()
-          firebase.auth().signOut().then(() => {
-            console.log('sda')
-            this.$router.replace('signin')
-          })
-      }
+    // logout: function() {
+    //   alert()
+    //   firebase
+    //     .auth()
+    //     .signOut()
+    //     .then(() => {
+    //       console.log('sda')
+    //       this.$router.replace('signin')
+    //     })
+    // }
+  },
+
+  // Toggle Button
+  myFunction: function(x) {
+    x.classList.toggle(this.change)
   }
 }
 </script>
 
- <style >
-   .web-style {
-     color: white;
-     padding-top:5px; 
-     text-decoration: none;
-     font-size:25px;
-   }
-   .services-1{
-     color: white;
-     text-decoration:none;
-     font-size: 18px;
-   }
-   
+<style>
+@media screen and (max-width: 780px) {
+  .nav {
+    width: fit-content;
+  }
 
-    @media screen and (max-width: 780px) {
-      .b-navbar-toggle {
-        margin-left: 3 50px;
-      }
-    }
- </style>
+  .list-items {
+    display: none;
+  }
+}
+</style>

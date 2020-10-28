@@ -15,7 +15,7 @@
 					   <h3>Product-1</h3>
 						</div>
 						<div class="card-body">
-             <a href=""><img :src="image" ></a>     
+             				<a href=""><img :src="image" ></a>     
 						</div>
 						<div class="card-footer">
 							<h3>Design made by webAdmin..</h3>
@@ -91,10 +91,10 @@ import image1 from "../assets/prod2.jpg";
 import image2 from "../assets/prod3.jpg";
 
 export default {
-    omponents: {
+    components: {
     },
      data()
-  {
+ 	 {
     return{
       
 		 image: image,

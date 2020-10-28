@@ -15,7 +15,7 @@
 					   <h3>Design-1</h3>
 						</div>
 						<div class="card-body">
-             <a href=""><img :src="image" ></a>     
+            				 <a href=""><img :src="image" ></a>     
 						</div>
 						<div class="card-footer">
 							<h3>Design made by webAdmin..</h3>
@@ -30,7 +30,7 @@
 					   <h3>Design-2</h3>
 						</div>
 						<div class="card-body">
-             <a href=""><img :src="image1" ></a>     
+           				  <a href=""><img :src="image1" ></a>     
 						</div>
 						<div class="card-footer">
 							<h3>Design made by webAdmin..</h3>
@@ -45,7 +45,7 @@
 					   <h3>Design-3</h3>
 						</div>
 						<div class="card-body">
-             <a href=""><img :src="image2" ></a>     
+							<a href=""><img :src="image2" ></a>     
 						</div>
 						<div class="card-footer">
 							<h3>Design made by webAdmin..</h3>
